@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+
+    <title>Uriel: Quiz Time</title>
+  </head>
+  <style type="type/css">
+  
+  </style>
+  <body>
+    <header class="style-header">
+      <h1 class="style-headline">General Chemistry Quiz</h1>
+      <button class="recent-scores" , id="recent-scores">Recent Scores</button>
+      <button class="Homepage" onclick="myFunction()" id="Home">Home</button>
+      <script>
+        function myFunction(){
+          window.location.href="index.html";
+        }
+      </script>
+     
+      <h2 class="style-countdown" id="clock">Seconds Remaining:</h2>
+    </header>
+    <main>
+      <section class="row-container">
+        <div class="column-containter">
+          <div class="start-screen" , id="start">
+            <p>
+              You will be given 5 minutes to answer 15 questions. Incorrect
+              answers will subtract 10 seconds from your available time. If you
+              run out of time, the quiz is over. Please click start button to
+              begin.
+            </p>
+          
+            <button class="start-button" id="start-button">Start Quiz</button>
+          </div>
+         
+          <div class="question-card" id="question-card">
+            <div class="question-header" id="qNum">Question Number:</div>
+            <textarea
+              class="question-text"
+              id="qText"
+              placeholder="Question Text Goes Here"
+            ></textarea>
+            <button class="answer-button" id="answer1">
+              Button 1 goes here
+            </button>
+            <button class="answer-button" id="answer2">
+              Button 2 goes here
+            </button>
+            <button class="answer-button" id="answer3">
+              Button 3 goes here
+            </button>
+            <button class="answer-button" id="answer4">
+              Button 4 goes here
+            </button>
+            <button class="results-button" id="showResult">
+              Button 5 Goes Here
+            </button>
+          </div>
+        </div>
+       
+        <div class="game-over" id="game-over">
+          <p>Game Over. Your Score was: <span id="score-span"></span></p>
+          <button class="play-again" id="play-again">Play Again</button>
+          <button class="register-score" id="register-score">
+            Register Score on Leaderboard
+          </button>
+        </div>
+        </div>
+        <div class="leaderboard" id="leaderboard">
+          <h2>Enter Initials</h2>
+          <form id="input-form">
+            <label for="initials">Initials:</label>
+            <input
+              type="text"
+              name="initials"
+              id="initials"
+              placeholder="JMB"
+            />
+            <button class="initial-entry" id="initial-entry">Submit</button>
+          </form>
+          <ul id="data">
+            Recent Scores
+          </ul>
+          <button class="leave-board" id="leave-board">Play Again</button>
+          <button class="clear-scores" id="clear-scores">Clear Scores</button>
+        </div>
+      </section>
+    </main>
+    <script src="jade.js"></script>
+  </body>
+</html>

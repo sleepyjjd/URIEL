@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Uriel: Memory Game</title>
+  <link rel="stylesheet" href="jade.css" />
+  <link rel="shortcut icon" type="x-icon" href="icon.png">
+  
+</head>
+<style type="text/css">
+  body{
+    background-image: url(img/bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Uriel: Memory Game</h1>
+      <br>
+      <large>Notice: Please pick the chemical symbol first (ex:Cl) before the full name of the element (ex: Chlorine) for the pairing to register!</large>
+    </header>
+
+    <!--start modal section-->
+    <section class="start-game-modal">
+      <div id="start-modal" class="modal">
+        <!-- modal content -->
+        <div class="modal-content">
+          <h2>Welcome to Symbol Memorization!</h2>
+          <p>Choose your desired difficulty:</p>
+          <div class="modal-content-options">
+            <button class="btn play-again-btn" id="easyGame">Easy</button>
+            <button class="btn play-again-btn" id="mediumGame">Medium</button>
+            <button class="btn play-again-btn" id="hardGame">Hard</button>
+            <button class="btn home-btn" onclick="pogi()" id="home">Home</button>
+        <script>
+        function pogi() {
+          window.location.href="index.html";
+        }
+        </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- modal section-->
+
+    <section class="win-game-modal">
+      <section class="score-panel">
+        <div class="timer-container">⏱ <span class="timer">00:00</span></div>
+        <ul id="star-rating" class="star-rating">
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+        </ul>
+        <span>
+          <span class="moves-counter">0</span>
+          Moves
+        </span>
+        <button class="btn reset-btn">
+          <i class="fa fa-repeat"></i>
+        </button>
+      </section>
+
+      <div id="modal" class="modal win">
+        <!-- modal content -->
+        <div class="modal-content" id="win-modal-content">
+          <div id="modal-details">
+            <span class="close">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You managed to pair all the cards!</p>
+            <button class="btn play-again-btn" id="play-again">
+              Play Again?
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <ul class="deck"></ul>
+    <large>
+      © 2024 UC-PNC
+    </large>
+  </div>
+  <script src="pogi.js"></script>
+</body>
+
+</html>
